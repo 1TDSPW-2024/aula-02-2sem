@@ -25,3 +25,11 @@ let precos = [
     {id : 9, preco: 25.55},
     {id : 10, preco: 9.27},
 ];
+
+//Lista de frutas precificadas
+const frutasPrecificadas = arrayDeObj.map((fruta)=>{
+    const preco = precos.find (p => p.id === fruta.id);
+    return {id: fruta.id, nome:fruta.nome, preco:preco.preco}
+    //console.log(preco);
+});
+console.log(frutasPrecificadas);
