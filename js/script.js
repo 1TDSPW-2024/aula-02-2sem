@@ -3,14 +3,13 @@ let frutas = ["Maçã", "Banana", "Laranja",
     "Manga", "Açaí", "Goiaba", "Ameixa",
     "Cereja", "Mirtilo", "Uva"];
 
-const arrayDeObj = frutas.map(fruta, indice => {
+const arrayDeObj = frutas.map((fruta, indice) => {
 
-    return { id: indice + 1, nome: fruta }
+    return { id: indice + 1, nome: fruta };
 })
 console.log(arrayDeObj);
 
-//criando um array de obj de preços de frutas;
-
+//Criando um array de obj de preços de frutas;
 let precos = [
     { id: 1, preco: 5.60 },
     { id: 2, preco: 8.80 },
@@ -22,4 +21,13 @@ let precos = [
     { id: 8, preco: 20.40 },
     { id: 9, preco: 25.55 },
     { id: 10, preco: 9.27 },
-]
+];
+
+//Gerando uma lista de frutas precificadas.
+const frutasPrecificadas = arrayDeObj.map((fruta) => {
+    const preco = precos.find(p => p.id === fruta.id);
+    // console.log(preco);
+    return { id: fruta.id, nome: fruta.nome, preco: preco.preco }
+});
+
+console.log(frutasPrecificadas);
