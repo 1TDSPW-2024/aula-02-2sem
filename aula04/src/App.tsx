@@ -15,11 +15,11 @@ import Rodape from "./components/Lista/lista";
 
 export default function App() {
   return (
-    <Cabecalho/>
-    <Conteudo/>
-    <Rodape/>
-
-
+    <>
+      <Cabecalho />
+      <Conteudo />
+      <Rodape />
+    </>
   )
 
 }

@@ -1,6 +1,9 @@
+
 export default function Conteudo() {
     return (
-        <div>Conteudo</div>
+        <main>
+            <lista />
+        </main>
     )
 
 }
